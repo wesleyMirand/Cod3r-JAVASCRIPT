@@ -6,35 +6,35 @@
     <title>Anatomia CSS</title>
     <style>
        .seletor {
-           color: #222;
-           font-size: bla;  
+           color: #fff;
+           font-size: 30px;  
            text-align: center;
            /* multiplos  valores */
            border: solid 5px navy; /* shorthand property*/
-           font-family: Arial, Helvetica, sans-serif ;
+           font-family: Helvetica, sans-serif ;
            /* funcoes */
-           width: calc(100% - 40%);
+           width: calc(100% - 40px);
            background-color: rgb(34, 153, 189);
        }
 
-        /*Usando uma pseudo-classe1*/
-        seletor:hover {
+        /*Usando uma pseudo-classe*/
+        .seletor:hover {
             background-color: crimson;
         }
 
-        usando um pseudo-elemento */
+        /* usando um pseudo-elemento */ 
         .seletor::first-letter {
-            font-size: 60pc
-            font-weight :bold
+            font-size: 60px;
+            font-weight: bold;
         }
 
-    ;luma
-
+        /*padrao de nomenclatura? */
+        /* dash-case ou camelCase? */
     </style>
 </head>
 
 <body>
-    <div class="selector">Conteúdo</div>
+    <div class="seletor">Conteúdo</div>
 </body>
 
 </html>
