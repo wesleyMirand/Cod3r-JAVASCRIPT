@@ -1,3 +1,5 @@
+const { partial } = require("lodash")
+
 function novoElemento(tagName, className) {
     const elem = document.createElement(tagName)
     elem.className = className
@@ -43,5 +45,38 @@ function PardeBarreiras (altura, abertura, x) {
   this.setX(x)
 }
 
-const b = new PardeBarreiras(700, 200,  800)
-document.querySelector('[wm-flappy').appendChild(b.elemento)
+// const b = new PardeBarreiras(700, 200,  800)
+// document.querySelector('[wm-flappy').appendChild(b.elemento)
+
+function Barreiras (altura, largura, abertura, espaco, notificarPonto) {
+  this.pares = [
+    new PardeBarreiras(altura, abertura, largura),
+    new PardeBarreiras(altura, abertura, largura + espaco),
+    new PardeBarreiras(altura, abetura, largura + espaco * 2),
+    new PardeBarreiras(altura, abertura, largura + espaco* 3)
+  ]
+
+  const deslocamento = 3
+  this.animar = () => {
+       this.pares.forEach(par => {
+         par.setX(par.getX() - deslocamento )
+
+    if(par.getX() < -par.getLargura()) {
+      par.setX(par.getX() + espaco * this.pares.lenght)
+      par.sortearAbertura()
+    }
+
+    const meio = largura /2
+    const cruzouOMeio = par.getX() + deslocamento >= meio
+         && par.getX() < meio
+    if (cruzouOMeio)notificarPonto()
+    })
+  }
+}
+
+const barreiras = new Barreiras (700, 1200, 200, 400)
+const areaDoJogo = document.querySelector('[wm-flappy]')
+barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
+setInterval(() => {
+  barreiras.animar()
+}, 20)
