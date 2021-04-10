@@ -11,4 +11,24 @@ function Barreira ( reversa = false) {
     const corpo = novoElemento ('div', 'corpo')
     this.elemento.appendChild(reversa ? corpo : borda)
     this.elemento.appendChild(reversa ? borda : corpo)
+
+    this.setAltura = altura => corpo.style.height = `${altura}px`
+}
+
+// const b = new Barreira(true)
+// b.setAltura(300)
+// document.querySelector('[wm-flappy]').appendChild(b.elemento)
+
+fucntion PardeBarreiras (altura, aberturam x ) {
+  this.elemento = novoElemento ('div', 'par-de-barreiras')
+
+  this.superior = new Barreira(true)
+  this.inferior = new Barreira(false)
+
+  this.elemento.appendChild(this.superior.elemento)
+  this.elemento.appendChild(this.inferior.elemento)
+
+  this.sortearAbertura = () => {
+    const alturaSuperior = Math.random() * 
+  }
 }
