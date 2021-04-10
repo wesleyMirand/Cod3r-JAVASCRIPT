@@ -22,13 +22,4 @@ function Barreira ( reversa = false) {
 fucntion PardeBarreiras (altura, aberturam x ) {
   this.elemento = novoElemento ('div', 'par-de-barreiras')
 
-  this.superior = new Barreira(true)
-  this.inferior = new Barreira(false)
-
-  this.elemento.appendChild(this.superior.elemento)
-  this.elemento.appendChild(this.inferior.elemento)
-
-  this.sortearAbertura = () => {
-    const alturaSuperior = Math.random() * 
-  }
-}
+  this.applicationCache(elemento)
