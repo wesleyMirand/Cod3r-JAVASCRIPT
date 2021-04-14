@@ -5,15 +5,16 @@
 @font-face {
   font-family: 'Pixel';
   src: url('../fonts/Pixel.ttf');
+
 }
 
 [wm-flappy] {
   position: relative;
-  border: 5px solid dodgerblue;
+  border: 5px solid rgb(255, 30, 30);
   height: 700px;
   width: 1200px;
   margin: 15px;
-  background-color: deepskyblue;
+  background-color: rgb(255, 0, 0);
   overflow: hidden;
 }
 
@@ -41,14 +42,14 @@
 .barreira .borda {
   height: 30px;
   width: 130px;
-  background: linear-gradient(90deg, #639301, #A5e82e);
+  background: linear-gradient(90deg, #1e0193, #A5e82e);
   border: 2px solid #000;
 }
 
 .barreira .corpo {
   height: 150px;
   width: 110px;
-  background: linear-gradient(90deg, #639301, #A5e82e);
+  background: linear-gradient(90deg, #550a0a, #291b42);
   border-left: 2px solid #000;
   border-right: 2px solid #000;
 }
@@ -59,4 +60,5 @@
   right: 10px;
   font-family: Pixel;
   font-size: 70px;
+  z-index: 100;
 }
