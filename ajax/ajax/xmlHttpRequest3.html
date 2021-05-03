@@ -17,8 +17,8 @@
 
             xhr.onreadystatechange = e => {
                 if (xhr.readyState === 4) {
-                    if ( xhr.status == 200) {
-                        config.sucesso ( xhr.responseXML)
+                    if ( xhr.status === 200) {
+                        config.sucesso(xhr.responseXML)
                     } else if (xhr.status >= 400) {
                         config.erro ({
                             codigo: xhr.status,
