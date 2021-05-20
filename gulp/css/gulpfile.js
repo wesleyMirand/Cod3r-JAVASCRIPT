@@ -1,4 +1,4 @@
-const { series } = require ('gulp')
+const { parallel } = require ('gulp')
 const gulp = require ('gulp')
 const sass = require ('gulp-sass')
 const uglifycss = require ('gulp-uglifycss')
@@ -17,4 +17,4 @@ function copiarHTML() {
       .pipe(gulp.dest('build'))
 }
  
-exports.default = series(transformacaoCSS)
+exports.default = parallel(transformacaoCSS, copiarHTML)
