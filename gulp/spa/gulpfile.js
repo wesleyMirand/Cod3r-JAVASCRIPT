@@ -13,3 +13,4 @@ module.exports.default = series (
   servidor,
   monitorarArquivos
 )
+(concat series = )
