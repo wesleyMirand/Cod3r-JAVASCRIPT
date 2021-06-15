@@ -76,9 +76,9 @@
   !*** ./src/assets/css/estilo.css ***!
   \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/assets/css/estilo.css?");
+eval("throw new Error(\"Module build failed: ModuleBuildError: Module build failed: Error: `sass-loader` requires `node-sass` >=4. Please install a compatible version.\\n    at Object.sassLoader (/home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/sass-loader/lib/loader.js:31:19)\\n    at /home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/webpack/lib/NormalModule.js:252:20\\n    at /home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/loader-runner/lib/LoaderRunner.js:367:11\\n    at /home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/loader-runner/lib/LoaderRunner.js:233:18\\n    at runSyncOrAsync (/home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/loader-runner/lib/LoaderRunner.js:143:3)\\n    at iterateNormalLoaders (/home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/loader-runner/lib/LoaderRunner.js:232:2)\\n    at Array.<anonymous> (/home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/loader-runner/lib/LoaderRunner.js:205:4)\\n    at Storage.finished (/home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:55:16)\\n    at /home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:91:9\\n    at /home/wesley/Documentos/codigos/Cod3r-Exer/webpack/node_modules/graceful-fs/graceful-fs.js:123:16\\n    at FSReqCallback.readFileAfterClose [as oncomplete] (internal/fs/read_file_context.js:63:3)\");\n\n//# sourceURL=webpack:///./src/assets/css/estilo.css?");
 
 /***/ }),
 
