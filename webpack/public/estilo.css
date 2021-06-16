@@ -1,3 +1,9 @@
 body {
   background-color: #444;
 }
+
+.botao {
+  background-color: royalblue;
+  color: antiquewhite;
+  font-size: 1.8em;
+}

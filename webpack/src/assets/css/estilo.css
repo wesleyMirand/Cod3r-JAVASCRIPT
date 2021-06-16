@@ -1,3 +1,7 @@
 body {
   background-color: #444;
+  background-image: url(../img/background-cod3r.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
 }
