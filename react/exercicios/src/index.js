@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import saudacao from './componentes/saudacao'
+import Saudacao from './componentes/saudacao'
 
 ReactDOM.render (
   <div>
