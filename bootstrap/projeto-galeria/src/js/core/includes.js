@@ -11,7 +11,6 @@ export function onLoadHtmlSucess(callback) {
 function loadIncludes(parent) {
   if (!parent) parent = 'body'
   $(parent).fund('[wm-include]').each(function (i, e) {
-    const url = $(e), attr('wm-include')
     $.ajax({
       url,
       success(data) {
