@@ -4,6 +4,12 @@ import './Calculator.css'
 import Button from '../components/Button'
 import Display from '../components/Display'
 
+const initialState  {
+  DisplayValue:'0',
+  clearDisplay: false,
+  
+}
+
 export default class Calculator extends Component {
 
   constructor(props) {
@@ -29,7 +35,7 @@ export default class Calculator extends Component {
   render () {
     return (
       <div className="calculator">
-        <Display value ={100} />
+        <Display value ={0} />
         <Button label ="AC" click= {this.clearMemory()} triple />
         <Button label ="/" click = {(this.setOperation)} />
         <Button label ="7" click= {this.addDigit} />
