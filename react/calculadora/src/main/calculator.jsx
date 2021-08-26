@@ -5,12 +5,16 @@ import Button from '../components/Button'
 import Display from '../components/Display'
 
 const initialState  {
-  DisplayValue:'0',
+  DisplayValue:'1000',
   clearDisplay: false,
-  
+  operation:null,
+  values: [0, 0],
+  current: 0
 }
 
 export default class Calculator extends Component {
+
+  state = {...initialState}
 
   constructor(props) {
     super(props)
@@ -21,7 +25,7 @@ export default class Calculator extends Component {
   }
 
   clearMemory () {
-    console.log('limpar')
+    this.setState({...initialState})
   }
 
   setOperation(Operation) {
@@ -29,13 +33,19 @@ export default class Calculator extends Component {
   }
 
   addDigit(n) {
-    console.log(n)
-  }
+    if ( n ==='. ' && this.state.DisplayValue.includes ('.')) {
+      return
+    }
+
+    const clearDisplay = this.state.DisplayValue ==='0'
+        || this.state.clearDisplay 
+    const cur
+      }
 
   render () {
     return (
       <div className="calculator">
-        <Display value ={0} />
+        <Display value ={this.state.DisplayValue} />
         <Button label ="AC" click= {this.clearMemory()} triple />
         <Button label ="/" click = {(this.setOperation)} />
         <Button label ="7" click= {this.addDigit} />
