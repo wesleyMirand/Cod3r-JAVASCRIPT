@@ -39,7 +39,18 @@ export default class Calculator extends Component {
 
     const clearDisplay = this.state.DisplayValue ==='0'
         || this.state.clearDisplay 
-    const cur
+    const currentValue = clearDisplay ? '' : this.state.DisplayValue
+    const DisplayValue = currentValue + n
+    this.setState ({ DisplayValue, clearDisplay: false })
+
+    if (n !== '.') {
+      const i = this.state.current
+      const newValue = parseFloat (DisplayValue)
+      const values = [...this.state.values]
+      values [i] = newValue
+      this.setState ({values})
+      console.log(values)
+    }
       }
 
   render () {
