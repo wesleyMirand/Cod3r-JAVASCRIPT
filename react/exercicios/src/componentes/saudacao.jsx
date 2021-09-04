@@ -20,7 +20,7 @@ export default class Saudacao extends Component {
     this.setState({nome: e.target.value })
   }
     const()
-  render () {
+  render (x) {
     const {tipo, nome} = this.props
     return (
       <div>
