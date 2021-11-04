@@ -18,6 +18,13 @@ export default class UserCrud extends Component {
 
   state= {...initialState}
 
+  componentWillMount() {
+    axios (baseUrl).then (resp =>{
+      
+    }
+      )
+  }
+
   clear () {
     this.setState({ user: initialState.user })
   }
@@ -92,6 +99,7 @@ export default class UserCrud extends Component {
   }
 
   render () {
+    console.log(this.state.list)
     return(
     <Main {...headerProps} >
       {this.renderForm()}
