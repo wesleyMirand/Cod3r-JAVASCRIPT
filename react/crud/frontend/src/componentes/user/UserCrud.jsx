@@ -20,6 +20,7 @@ export default class UserCrud extends Component {
 
   componentWillMount() {
     axios (baseUrl).then (resp =>{
+      this.setState({ list: resp.data })
       
     }
       )
@@ -98,8 +99,14 @@ export default class UserCrud extends Component {
 
   }
 
+  load (user) {
+    this.setState({user})
+  }
+
+  remove (user) {
+    axios.delete(`${baseUrl}/${user.id}`)
+  }
   render () {
-    console.log(this.state.list)
     return(
     <Main {...headerProps} >
       {this.renderForm()}
