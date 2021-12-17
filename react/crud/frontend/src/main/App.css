@@ -3,6 +3,7 @@
 
   --logo-height:100px;
   --header-height: 100px;
+  --menu-top-height: 10px/
   --aside-width: 225px;
   --footer-height:40px;
 
@@ -58,5 +59,13 @@ footer.footer {
     grid-template-rows:
         var(--header-height)
         var(--menu-top-height)
+        1fr
+        var(--footer-height);
+    grid-template-columns: var (--aside-width) 1fr;
+    grid-template-areas:
+        "logo header"
+        "menu menu"
+        "content content"
+        "footer footer";
   }
 }
