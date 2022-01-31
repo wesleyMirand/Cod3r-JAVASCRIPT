@@ -7,9 +7,19 @@
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
-
+    <div id="app">
+        <p>{{ link }}</p>
+        <p><a href="{{ link }}">Canal?</a></p>
+        <p><a v-bind:href="link">Canal</a></p>
+        <p><a :href="link"></a>Canal</p>
+    </div>
     <script>
-        // ...
+        new Vue({
+            el:"#app",
+            data: {
+                link:"https://youtube.com/cod3rcursos"
+            }
+        })
     </script>
 </body>
 </html>

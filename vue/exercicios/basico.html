@@ -10,13 +10,13 @@
     <div id="app">
         <p>1) {{ 2 + 2 }} </p>
         <p>2) {{ "teste".toUpperCase() }}</p>
-        <p>3) Produto: {{ nome }}</p>
+        <p>3) Produto: {{ nome }}, R$ {{ preco}}, {{desconto * 100 }}%</p>
         <p>4) Hora Certa : {{ horaCerta()}} </p>
         <p>5) Preco Com Desconto: R$ {{ precoComDesconto }}</p>
     </div>
 
     <script>
-        const vm = new Vue ({
+        new Vue ({
             el:"#app",
             data: {
                 nome: "Caneta",
@@ -25,12 +25,12 @@
             },
             methods: {
                 horaCerta() {
-                    return new Date().toLocaleDateString()
+                    return new Date().toLocaleString()
                 }
             },
             computed: {
                 precoComDesconto( ) {
-                    return this.preco
+                    return this.preco * (1 - this.desconto)
                 }
             }
         })
