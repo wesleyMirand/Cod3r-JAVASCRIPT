@@ -12,8 +12,15 @@
             {{i+1}} {{aluno.nome}} - {{aluno.nota}} - 
             <span v-if="aluno.nota >= 9">Quadro de Honra</span>
             <span v-else-if="aluno.nota >=7 ">Aprovado</span>
-            <span v-else-if="aluno.nota>= 3 ">Recuperação</span>
+            <span v-else-if="aluno.nota>= 3 ">Recuperação</span> 
+            <span v-else>Reprovado</span>
+            <span v-else>Aprovado Em Questão</span>
         </p>
+        <ul style="list-style: none;">
+            <li v-for="n in 8">
+                <span v-show ="n>=4">{{n}}</span>
+            </li>
+        </ul>
     </div>
     <script>
         new Vue({
